@@ -33,17 +33,20 @@
     {
         "name":"Ethos",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"ethos",
+        "description":"Ethos is an access token that enables anybody to securely manage their cryptocurrency wallets, keys and coins."
     },
     {
         "name":"0x",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"0x",
+        "description":"0x is an open, permissionless protocol allowing for ERC20 tokens to be traded on the Ethereum blockchain."
     },
     {
         "name":"Golem",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"golem-network-tokens",
+        "description":"Golem is a global, open sourced, decentralized supercomputer that anyone can access. It's made up of the combined power of user's machines, from personal laptops to entire datacenters."
     },
     {
         "name":"Nxt",
@@ -52,23 +55,26 @@
     },
     {
         "name":"Sia",
-        "category":"crypto",
-        "description":"placeholder"
+        "category":"both",
+        "description":"Sia is both. Sia splits apart, encrypts, and distributes your files across a decentralized network.\n\nSia also refers to Sia Kate Isobelle Furler, an Australian singer-songwriter, record producer and music video director."
     },
     {
         "name":"Stratis",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"stratis",
+        "description":"The Stratis cryptographic token ($STRAT) combines the proven security consensus of Bitcoin,  with the latest advancements in blockchain technology."
     },
     {
         "name":"Steem",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"steem",
+        "description":"Steem is a blockchain-based rewards platform for publishers to monetize content and grow community."
     },
     {
         "name":"Verge",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"verge",
+        "description":"Verge Currency is a cryptocurrency designed for everyday use. It improves upon the original Bitcoin blockchain and aims to fulfill its initial purpose of providing individuals and businesses with a fast, efficient and decentralized way of making direct transactions while maintaining personal privacy."
     },
     {
         "name":"Cardano",
@@ -85,12 +91,14 @@
     {
         "name":"Neo",
         "category":"both",
-        "description":"placeholder"
+        "coinmarketcap_id":"neo",
+        "description":"Neo is both. DJ Neo is one of the internationally best-known music producers for harder electronic sounds (Hardstyle).\n\nNeo is also a non-profit community-based blockchain project that utilizes blockchain technology and digital identity to digitize assets, to automate the management of digital assets using smart contracts, and to realize a \"smart economy\" with a distributed network."
     },
     {
         "name":"Zcash",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"zcash",
+        "description":"Zcash is a cryptocurrency aimed at using cryptography to provide enhanced privacy for its users compared to other cryptocurrencies such as Bitcoin."
     },
     {
         "name":"Ardor",
@@ -113,17 +121,20 @@
     {
         "name":"WAX",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"wax",
+        "description":"WAX is a decentralized platform that enables anyone to operate a fully functioning virtual marketplace with zero investment in security, infrastructure, or payment processing."
     },
     {
         "name":"Bytom",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"bytom",
+        "description":"Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom."
     },
     {
         "name":"RChain",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"rchain",
+        "description":"Rchain provides content delivery at the scale of Facebook and supports transactions at the speed of Visa."
     },
     {
         "name":"Walton",
@@ -134,22 +145,26 @@
     {
         "name":"Storj",
         "category":"crypto",
-        "description":"placeholder"
+        "description":"Storj aims to become a cloud storage platform that can’t be censored or monitored, or have downtime. It is the first decentralized, end-to-end encrypted cloud storage that uses blockchain technology and cryptography to secure your files.",
+        "coinmarketcap_id":"storj"
     },
     {
         "name":"Gnosis",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"gnosis",
+        "description":"Gnosis is a permissionless and decentralized platform built on Ethereum, Gnosis is the easiest way to aggregate relevant information from both human and AI agents into one number."
     },
     {
         "name":"Iconomi",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"iconomi",
+        "description":"The ICONOMI Digital Assets Management Platform is a new and unique technical service that allows anyone from beginners to blockchain experts to invest in and manage digital assets."
     },
     {
         "name":"Raiden",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"raiden-network-token",
+        "description":"The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee and scalable payments. It’s complementary to the Ethereum blockchain and works with any ERC20 compatible token."
     },
     {
         "name":"Bancor",
@@ -160,17 +175,20 @@
     {
         "name":"Substratum",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"substratum",
+        "description":"Substratum is an open-source network that allows anyone to allocate spare computing resources to make the internet a free and fair place for the entire world."
     },
     {
         "name":"Ubiq",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"ubiq",
+        "description":"Ubiq is a decentralized platform which allows the creation and implementation of smart contracts and decentralized applications. Built upon an improved Ethereum codebase, the Ubiq blockchain acts as a large globally distributed ledger and supercomputer, allowing developers to create decentralized and automated solutions to thousands of tasks which today are carried out by third party intermediaries."
     },
     {
         "name":"Red Pulse",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"red-pulse",
+        "description":"Red Pulse will introduce a token, RPX, that will power a brand new content production, distribution, and consumption platform focused initially on China’s capital markets. Our vision is to create a direct-incentivization ecosystem facilitated by the RPX token, creating a global community of colleagues."
     },
     {
         "name":"Aragon",
@@ -187,7 +205,7 @@
     {
         "name":"Skrillex",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Sonny John Moore, known professionally as Skrillex, is an American electronic dance music producer, DJ, singer, songwriter and multi-instrumentalist."
     },
     {
         "name":"Zedd",
@@ -197,12 +215,7 @@
     {
         "name":"Deadmau5",
         "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Hardwell",
-        "category":"edm",
-        "description":"placeholder"
+        "description":"Joel Thomas Zimmerman, better known by his stage name deadmau5, is a Canadian record producer and DJ from Toronto, Ontario. Zimmerman produces a variety of styles within the progressive house genre and sometimes other forms of electronic music."
     },
     {
         "name":"Diplo",
@@ -247,32 +260,22 @@
     {
         "name":"Madeon",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Hugo Pierre Leclercq, better known by his stage name Madeon, is a French DJ, record producer, singer, songwriter and musician from Nantes, France."
     },
     {
         "name":"r3hab",
         "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Marshmello",
-        "category":"edm",
-        "description":"placeholder"
+        "description":"Fadil El Ghoul, better known by his stage name R3hab (pronounced \"rehab\"), is a Dutch DJ, record producer and remixer of Moroccan origin from Breda. Alongside Afrojack and Chuckie, he is one of the proponents of the modern Dutch house subgenre."
     },
     {
         "name":"Deorro",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Erick Orrosquieta, commonly known by his stage name Deorro, is an American DJ signed to Ultra Records. He formerly used the name TON!C."
     },
     {
         "name":"Nervo",
         "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Justice",
-        "category":"edm",
-        "description":"placeholder"
+        "description":"Miriam Nervo and Olivia Nervo are Australian DJs better known by their stage name Nervo. After signing with Sony/ATV Music Publishing at 18 years of age, the sisters pursued careers as songwriting partners and in 2008 they signed with Fredrik Olsson and his Swedish music publishing company Razor Boy Music Publishing, which led to co-writing the Grammy Award-winning single, \"When Love Takes Over\", performed by David Guetta and Kelly Rowland. "
     },
     {
         "name":"Gramatik",
@@ -300,14 +303,9 @@
         "description":"Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Their sound draws from blue-eyed soul, dance music, rock, \"electro-synth\", disco and also (arguably primarily) funk."
     },
     {
-        "name":"Haddaway",
-        "category":"edm",
-        "description":"placeholder"
-    },
-    {
         "name":"Squarepusher",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Squarepusher is the principal pseudonym adopted by Tom Jenkinson, a UK-based recording artist. His compositions draw on a number of influences including drum and bass, acid house, jazz and electroacoustic music."
     },
     {
         "name":"Eminence",
@@ -333,6 +331,21 @@
         "name":"Avicii",
         "category":"edm",
         "description":"Tim Bergling, better known by his stage name Avicii is a Swedish musician, remixer and record producer. Bergling was ranked third on DJ Mag in 2012 and 2013 and has been nominated twice for a Grammy Award."
+    },
+    {
+        "name":"Deskee",
+        "category":"edm",
+        "description":"Deskee is the stage name for Derrick Crumpley, an American house music artist."
+    },
+    {
+        "name":"iiO",
+        "category":"edm",
+        "description":"iiO was a New York City-based dance music act composed of singer and songwriter Nadia Ali and record producer Markus Moser. The group gained prominence for its 2001 single, \"Rapture\", which reached number two on the UK Singles Chart and the Billboard Hot Dance Club Play chart."
+    },
+    {
+        "name":"Raze",
+        "category":"edm",
+        "description":"Raze was an American electronic dance music group, assembled by the multi-instrumentalist and producer Vaughan Mason. Raze hit #1 on the US Hot Dance Club Play chart in 1988 with \"Break 4 Love\" which also crossed over to urban radio stations, where it became a moderate hit."
     }
 ]
 }
