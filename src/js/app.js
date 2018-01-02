@@ -9,6 +9,17 @@ function shuffleArray(a) {
     return a;
 }
 
+function getMarketCap(ticker){
+    var xhr = new XMLHttpRequest();
+    var url = "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/"
+    xhr.open("GET", url, false);
+    xhr.send();
+    var response = JSON.parse(xhr.responseText);
+    var market_cap = (response[0]["market_cap_usd"]);
+    console.log("Market Cap is: %s", market_cap);
+    return market_cap
+}
+
 var game_data = {};
 
 $(function() {
@@ -57,7 +68,7 @@ var game = new Vue({
 
         nextQuestion: function(){
             if(this.current_question_idx < (this.game_questions.length - 1)){
-                this.current_question_idx += 1; 
+                this.current_question_idx += 1;
                 this.guessed = null; 
             }else{
                 // End game, show final results
@@ -73,7 +84,13 @@ var game = new Vue({
             var q = this.game_questions[this.current_question_idx];
             if((answer == q.category) || (q.category == "both")){
                 // correct
-                this.guessed_correct = true; 
+                this.guessed_correct = true;
+                
+                // if crypto GET market cap
+                if (q.category == "crypto"){
+                    getMarketCap(this.game_questions[this.current_question_idx].coinmarketcap_id);
+                }
+
                 this.total_correct++;
 
             }else{

@@ -76,7 +76,8 @@ module.exports = function(grunt) {
     build: {
       files: 'build/**/*.json'
     }
-  }
+  },
+  
   
    });
   
@@ -91,6 +92,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-http');
+
 
     grunt.registerTask('default', ['concat', 'copy', 'less']);
 
