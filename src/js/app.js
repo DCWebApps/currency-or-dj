@@ -31,24 +31,30 @@ var game = new Vue({
     el:'#game',
     data: {
         started:false, 
-        current_question_idx:0,
+        guessted:false,
         game_questions:[],
-        total_correct:0,
-        current_question:{}
+        current_question_idx:0,
+        total_correct:0
     },
+   
     methods:{
         startGame: function(){
             this.started = true;
             this.current_question_idx = 0;
-            this.total_correct=0;
+            this.total_correct = 0;
 
             // Pick the questions for this round from the game data 
-            this.gamequestions = shuffleArray(game_data.questions).slice(0, game_data.questions_per_game);
+            var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
+            this.game_questions = q;
+
             console.log("selected questions = %o", this.gamequestions);
-            this.current_question = this.gamequestions[0];
         },
+        total_game_questions: function(){return this.game_questions.length;},
         nextQuestion: function(){
 
+        },
+        guess: function(answer){
+            console.log("guessed: %o", answer);
         }
     }
 });
