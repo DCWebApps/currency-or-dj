@@ -29,7 +29,19 @@
                 <p id="index">Question {{current_question_idx+1}} / {{game_questions.length}}</p>
                 <h2 id="prompt">{{game_questions[current_question_idx].name}}</h2>
 
-                <div id="choices">
+                <div v-if="guessed">
+                        <p id="explanation">
+                            <span class="youguessed">You guessed <strong>{{game_data.category_names[guessed]}}</strong>.<br/><br/></span>
+                            <span class="correct" v-if="guessed_correct">Correct!</span>
+                            <span class="wrong" v-else>Wrong!</span>
+                            <br/>
+                            <span class="description">
+                            {{game_questions[current_question_idx].description}}
+                            </span>
+                        </p>
+                        <button type="button" class="btn btn-lg btn-secondary" v-on:click="nextQuestion">Next</button>
+                </div> 
+                <div id="choices" v-else>
                     <button type="button" class="btn btn-lg btn-secondary" v-on:click="guess('crypto')">Crypto</button>
                     <button type="button" class="btn btn-lg btn-secondary" v-on:click="guess('edm')">EDM DJ</button>
                 </div>
