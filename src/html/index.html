@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <meta property="og:url"                content="https://dangrover.github.io/crypto-or-edm/index.html" />
+    <meta property="og:title"              content="Cryptocurrency or DJ?" />
+    <meta property="og:description"        content="Can you guess which names refer to cryptocurrencies and which refer to DJs? We bet you can't!" />
 </head>
 
 <body>
@@ -33,7 +36,7 @@
                 <div id="summary" v-if="ended" class="col-lg-4 col-md-4 col-sm-12">
 
                     <h2 class="points">You got {{total_correct}}/{{game_questions.length}}!</h2>
-                    <p class="judgement" v-if="(total_correct/game_questions)>0.5">
+                    <p class="judgement" v-if="(total_correct/game_questions.length) > 0.5">
                         You should be a crypto fund manager or a record producer.
                     </p>
                     <p class="judgement" v-else>
