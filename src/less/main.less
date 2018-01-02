@@ -52,6 +52,10 @@ body{
 
     #choices{
         margin-right:1em;
+
+        .guess{
+            width:8em;
+        }
     }
 
     #explanation{
@@ -67,7 +71,22 @@ body{
         }
 
         .correct, .wrong{
-            font-size:200%;
+        }
+
+        .description{
+            display:block;
         }
     }
+}
+
+#summary{
+    text-align: center;
+    .points, .judgement, .share{
+        color:#eee;
+    }
+
+    .share{
+        margin-top:3em;
+    }
+
 }

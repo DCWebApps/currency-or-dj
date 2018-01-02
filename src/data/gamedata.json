@@ -1,6 +1,6 @@
 {
 "game_rules":{
-    "questions_per_game":20
+    "questions_per_game":15
 },
 "category_names":{
     "crypto":"Cryptocurrency",
@@ -273,7 +273,7 @@
     {
         "name":"Eminence",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Eminence is an electronic music duo consisting of Canadian musicians Dillon ‘DLN’ Wong and Mathew ‘ Kazmo’ Kazmierowski. They reached significant popularity in the late 2010’s progressive house & vocal trance movement in North America and met with continued success in the years following."
     },
     {
         "name":"DotEXE",
@@ -283,17 +283,12 @@
     {
         "name":"Ephixa",
         "category":"edm",
-        "description":"James Leusink (born April 13, 1990) commonly known by his stage name Ephixa is a Canadian DJ, composer, musician and record producer. He is best known for his remix of \"Lost Woods\" from The Legend of Zelda game series."
+        "description":"James Leusink, commonly known by his stage name Ephixa is a Canadian DJ, composer, musician and record producer. He is best known for his remix of \"Lost Woods\" from The Legend of Zelda game series."
     },
     {
         "name":"Kazell",
         "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Kazell",
-        "category":"edm",
-        "description":"placeholder"
+        "description":"Kevin Bazell, known more popularly in dance circles as Kazell, has infected the American club scene with his unique brand of electronic dance music, stimulating crowds everywhere with his tough, funky and soulful grooves."
     },
     {
         "name":"Avicii",
