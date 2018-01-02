@@ -4,6 +4,26 @@
 },
 "questions":[
     {
+        "name":"RChain",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Bytom",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+        {
+        "name":"Enigma",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"COSS",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
         "name":"Cardano",
         "category":"crypto",
         "description":"placeholder",
@@ -16,7 +36,7 @@
     },
     {
         "name":"Neo",
-        "category":"crypto",
+        "category":"both",
         "description":"placeholder"
     },
     {
