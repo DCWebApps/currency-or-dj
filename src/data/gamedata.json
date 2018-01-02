@@ -1,22 +1,29 @@
 {
 "game_rules":{
-    "questions_per_game":20
+    "questions_per_game":15
+},
+"category_names":{
+    "crypto":"Cryptocurrency",
+    "edm":"DJ"
 },
 "questions":[
     {
         "name":"RChain",
         "category":"crypto",
-        "description":"placeholder"
+        "description":"RChain is a cryptocurrency whose mission is \"to become a blockchain solution with industrial-scale utility, RChain must provide content delivery at the scale of Facebook and support transactions at the speed of Visa.\"",
+        "coinmarketcap_id":"rchain"
     },
     {
         "name":"Bytom",
         "category":"crypto",
-        "description":"placeholder"
+        "description":"Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom.",
+        "coinmarketcap_id":"bytom"
     },
         {
         "name":"Enigma",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"enigma",
+        "description":"The Enigma protocol is a second-layer, off-chain network that aims to solve the two biggest problems for blockchains: scalability and privacy. "
     },
     {
         "name":"COSS",
@@ -65,14 +72,15 @@
     },
     {
         "name":"Cardano",
+        "coinmarketcap_id":"cardano",
         "category":"crypto",
-        "description":"placeholder",
-        "coinmarketcap_id":"cardano"
+        "description":"Cardano is a decentralised public blockchain and cryptocurrency project and is fully open source. Cardano is developing a smart contract platform which seeks to deliver more advanced features than any protocol previously developed."
     },
     {
         "name":"Stellar",
+        "coinmarketcap_id":"stellar",
         "category":"crypto",
-        "description":"placeholder"
+        "description":"Stellar is a distributed, hybrid blockchain that is fully open-source. It is infrastructure that exists to facilitate cross-asset transfers of value, including payments."
     },
     {
         "name":"Neo",
@@ -142,7 +150,8 @@
     {
         "name":"Bancor",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"bancor",
+        "description":"Bancor is a Decentralized Liquidity Network that allows you to hold any Ethereum token and convert it to any other token in the network, with no counter party, at an automatically calculated price, using a simple web wallet."
     },
     {
         "name":"Substratum",
@@ -167,7 +176,9 @@
     {
         "name":"Aragon",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"aragon",
+        "description":"Aragon is a project that aims to disintermediate the creation and maintenance of organizational structures by using blockchain technology. We want to empower people across the world to easily and securely manage their organizations."
+
     },
     {
         "name":"Tierion",
@@ -202,22 +213,22 @@
     {
         "name":"Diplo",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Thomas Wesley Pentz, better known by his stage name Diplo, is an American DJ, record producer, songwriter, and record executive based in Los Angeles, California."
     },
     {
         "name":"Kygo",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Kyrre Gørvell-Dahll, better known by his stage name Kygo, is a Norwegian DJ, record producer, musician, and songwriter. He garnered international attention with his remix of the track \"I See Fire\" by Ed Sheeran."
     },
     {
         "name":"Galantis",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Galantis is a Swedish electronic dance music production, songwriting and DJ duo consisting of Christian Karlsson and Linus Eklöw."
     },
     {
         "name":"Kaskade",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Ryan Gary Raddon, better known by his stage name Kaskade, is an American DJ, record producer and remixer."
     },
     {
         "name":"Nero",
@@ -262,22 +273,22 @@
     {
         "name":"Gramatik",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Gramatik is a Slovenian electronic music producer, originally from Portorož, Slovenia. He currently resides in New York City."
     },
     {
         "name":"Dyro",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Jordy van Egmond, professionally known by his stage name Dyro, is a Dutch DJ and EDM producer. Since 2010 he has released original singles and remixes on labels such as Revealed Recordings, Musical Freedom, and Def Jam, and has also released official remixes for tracks such as \"Right Now\" by Rihanna and \"Iron\" by Nicky Romero and Calvin Harris."
     },
     {
         "name":"Tristam",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Tristam is an electronic music producer currently signed to Monstercat. His first release on the label was \"Party for the Living\", which is included on Monstercat 004 - Identity."
     },
     {
         "name":"Audien",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Nathaniel \"Nate\" Rathbun, better known under his stage name Audien, is an American DJ, record producer and musician. He produces progressive house, trance and electro house. Audien has released many singles and remixes for electronic record labels including Enhanced, Perceptive, Armada, Black Hole, and Nervous."
     },
     {
         "name":"Dubvision",
@@ -287,7 +298,7 @@
     {
         "name":"Chromeo",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Chromeo is a Canadian electro-funk duo from Montreal, formed in 2002 by musicians David \"Dave 1\" Macklovitch and Patrick \"P-Thugg\" Gemayel. Their sound draws from blue-eyed soul, dance music, rock, \"electro-synth\", disco and also (arguably primarily) funk."
     },
     {
         "name":"Haddaway",
@@ -302,27 +313,22 @@
     {
         "name":"Eminence",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Eminence is an electronic music duo consisting of Canadian musicians Dillon ‘DLN’ Wong and Mathew ‘ Kazmo’ Kazmierowski. They reached significant popularity in the late 2010’s progressive house & vocal trance movement in North America and met with continued success in the years following."
     },
     {
         "name":"DotEXE",
         "category":"edm",
-        "description":"placeholder"
+        "description":"DotEXE is an alias of Scott Stanley, his other alias being Summer Was Fun. He is a DJ/producer from Chicago, Illinois who debuted on Monstercat in 2011 as DotEXE with \"Kill It With Fire\", a dubstep song that was featured on Monstercat 004 - Identity. "
     },
     {
         "name":"Ephixa",
         "category":"edm",
-        "description":"placeholder"
+        "description":"James Leusink, commonly known by his stage name Ephixa is a Canadian DJ, composer, musician and record producer. He is best known for his remix of \"Lost Woods\" from The Legend of Zelda game series."
     },
     {
         "name":"Kazell",
         "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Kazell",
-        "category":"edm",
-        "description":"placeholder"
+        "description":"Kevin Bazell, known more popularly in dance circles as Kazell, has infected the American club scene with his unique brand of electronic dance music, stimulating crowds everywhere with his tough, funky and soulful grooves."
     },
     {
         "name":"Avicii",

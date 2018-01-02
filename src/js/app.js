@@ -31,7 +31,9 @@ var game = new Vue({
     el:'#game',
     data: {
         started:false, 
-        guessted:false,
+        ended:false,
+        guessed:false,
+        guessed_correct:false,
         game_questions:[],
         current_question_idx:0,
         total_correct:0
@@ -40,8 +42,10 @@ var game = new Vue({
     methods:{
         startGame: function(){
             this.started = true;
+            this.ended = false; 
             this.current_question_idx = 0;
             this.total_correct = 0;
+            this.game_data = game_data;
 
             // Pick the questions for this round from the game data 
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
@@ -51,10 +55,30 @@ var game = new Vue({
         },
         total_game_questions: function(){return this.game_questions.length;},
         nextQuestion: function(){
-
+            if(this.current_question_idx < (this.game_questions.length - 1)){
+                this.current_question_idx += 1; 
+                this.guessed = null; 
+            }else{
+                // End game, show final results
+                console.log("Game over");
+                this.ended = true; 
+            }
         },
         guess: function(answer){
             console.log("guessed: %o", answer);
+            this.guessed = answer;
+
+            var q = this.game_questions[this.current_question_idx];
+            if((answer == q.category) || (q.category == "both")){
+                // correct
+                this.guessed_correct = true; 
+
+                this.total_correct++;
+
+            }else{
+                // wrong 
+                this.guessed_correct = false; 
+            }
         }
     }
 });
