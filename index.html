@@ -19,13 +19,13 @@
     <div class="container" id="particles-js">
         <div class="row" id="title">
             <div class="col-lg-12">
-                <h1>Currency or DJ?</h1>
+                <img src="img/logo.png" alt="Currency or DJ?"/>
             </div>
         </div>
 
 
 
-        <div id="game">
+        <div id="game" v-cloak>
             <div class="row">
                 <div class="col-lg-4 col-md-4"></div>
 
@@ -51,7 +51,7 @@
 
                 <!-- QUESTION SCREEN -->
                 <div id="question" v-else-if="started" class="col-lg-4 col-md-4 col-sm-12">
-                    <p id="index">Question {{current_question_idx+1}} / {{game_questions.length}}</p>
+                    <p id="index">{{current_question_idx+1}} / {{game_questions.length}}</p>
                     
                     <div v-if="guessed">
                         <p id="explanation">
