@@ -43,6 +43,12 @@ module.exports = function(grunt) {
             'dest':'build/data',
             'expand':true
             },
+            img:{
+              'cwd':'src/img',
+              'src':'**',
+              'dest':'build/img',
+              'expand':true
+            }
       },
       watch: {
             scripts: {
