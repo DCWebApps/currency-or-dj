@@ -6,7 +6,11 @@ body{
     font-family:'Inconsolata', monospace;
 }
 
-// Use particles as background
+// Cloak stuff before vue loads
+// Per: https://medium.com/vuejs-tips/v-cloak-45a05da28dc4
+[v-cloak] {display: none}
+
+// Use particles as background, as is required of anything crypto-related.
 // Per: https://github.com/VincentGarreau/particles.js/issues/216#issuecomment-315659059
 #particles canvas{
     position: absolute;
