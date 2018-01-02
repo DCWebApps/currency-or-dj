@@ -12,12 +12,15 @@ module.exports = function(grunt) {
           }
       },
       less:{
-          options:{
-
-          },
-          files:{
-             'build/css/main.css':'/src/less/main.less'
-          }
+          site:{
+            options:{
+                compress:true,
+            },
+            files:{
+                'build/css/main.css':'src/less/main.less',
+                'build/css/bootstrap.css':'src/less/vendor/bootstrap/bootstrap.less'
+            }
+        }
       },
       uglify:{
           js:{
