@@ -9,69 +9,82 @@
 "questions":[
     {
         "name":"RChain",
+        "coinmarketcap_id":"rchain",
         "category":"crypto",
         "description":"RChain is a cryptocurrency whose mission is \"to become a blockchain solution with industrial-scale utility, RChain must provide content delivery at the scale of Facebook and support transactions at the speed of Visa.\"",
         "coinmarketcap_id":"rchain"
     },
     {
         "name":"Bytom",
+        "coinmarketcap_id":"bytom",
         "category":"crypto",
         "description":"Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom.",
         "coinmarketcap_id":"bytom"
     },
         {
         "name":"Enigma",
+        "coinmarketcap_id":"enigma",
         "category":"crypto",
         "coinmarketcap_id":"enigma",
         "description":"The Enigma protocol is a second-layer, off-chain network that aims to solve the two biggest problems for blockchains: scalability and privacy. "
     },
     {
         "name":"COSS",
+        "coinmarketcap_id":"coss",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Ethos",
+        "coinmarketcap_id":"ethos",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"0x",
+        "coinmarketcap_id":"0x",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Golem",
+        "coinmarketcap_id":"golem",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Nxt",
+        "coinmarketcap_id":"nxt",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Sia",
+        "coinmarketcap_id":"siacoin",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Stratis",
+        "coinmarketcap_id":"stratis",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Steem",
+        "coinmarketcap_id":"steem",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Verge",
+        "coinmarketcap_id":"verge",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Cardano",
+        "id":"verge",
         "coinmarketcap_id":"cardano",
         "category":"crypto",
         "description":"Cardano is a decentralised public blockchain and cryptocurrency project and is fully open source. Cardano is developing a smart contract platform which seeks to deliver more advanced features than any protocol previously developed."
@@ -84,25 +97,34 @@
     },
     {
         "name":"Neo",
+        "coinmarketcap_id":"neo",
         "category":"both",
         "description":"placeholder"
     },
     {
         "name":"Zcash",
+        "coinmarketcap_id":"zcash",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Ardor",
+        "coinmarketcap_id":"ardor",
         "category":"crypto",
         "coinmarketcap_id":"ardor",
         "description":"The Ardor Blockchain-as-a-Service Platform was created by Jelurida using the proven features of the solid, reliable Nxt blockchain technology. Ardor extends Nxt for use in certain applications that require scalability and want to avoid “mining” required by some developing blockchains."
     },
     {
+    {
         "name":"Lisk",
+        "coinmarketcap_id":"lisk",
         "category":"crypto",
         "coinmarketcap_id":"lisk",
         "description":"Based on its own Blockchain network and token LSK, Lisk will enable developers to create, distribute and manage decentralized Blockchain applications by deploying their own sidechain linked to the Lisk network, including a custom token."
+    },
+        "name":"Zcoin",
+        "coinmarketcap_id":"zcoin",
+        "category":"crypto",
     },
     {
         "name":"0x",
@@ -112,16 +134,13 @@
     },
     {
         "name":"WAX",
+        "coinmarketcap_id":"wax",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Bytom",
-        "category":"crypto",
-        "description":"placeholder"
-    },
-    {
-        "name":"RChain",
+        "coinmarketcap_id":"bytom",
         "category":"crypto",
         "description":"placeholder"
     },
@@ -132,54 +151,73 @@
         "description":"Walton is a cryptocurrency whose mission is to extend the block chain technology from Internet to Internet of Things, which will in turn create a genuine, believable, traceable business model with totally shared data and transparent information, depending on the combination of RFID technology and Walton chain."
     },
     {
+        "name":"QASH",
+        "coinmarketcap_id":"qcash",
+        "category":"crypto",
+    },
+    {
         "name":"Storj",
+        "coinmarketcap_id":"storj",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Gnosis",
+        "coinmarketcap_id":"gnosis-gno",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Iconomi",
+        "coinmarketcap_id":"iconomi",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Raiden",
+        "coinmarketcap_id":"raiden",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Bancor",
-        "category":"crypto",
         "coinmarketcap_id":"bancor",
+        "category":"crypto",
         "description":"Bancor is a Decentralized Liquidity Network that allows you to hold any Ethereum token and convert it to any other token in the network, with no counter party, at an automatically calculated price, using a simple web wallet."
     },
     {
         "name":"Substratum",
+        "coinmarketcap_id":"substratum",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Ubiq",
+        "coinmarketcap_id":"ubiq",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Red Pulse",
+        "coinmarketcap_id":"red-pulse",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Mooncoin",
+        "coinmarketcap_id":"mooncoin",
         "category":"crypto",
         "description":"placeholder"
     },
     {
         "name":"Aragon",
-        "category":"crypto",
         "coinmarketcap_id":"aragon",
+        "category":"crypto",
         "description":"Aragon is a project that aims to disintermediate the creation and maintenance of organizational structures by using blockchain technology. We want to empower people across the world to easily and securely manage their organizations."
     },
     {
         "name":"Tierion",
+        "coinmarketcap_id":"tierion",
         "category":"crypto",
         "coinmarketcap_id":"tierion",
         "description":"Tierion turns the blockchain into a global platform for verifying any data, file, or process."
