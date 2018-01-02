@@ -95,17 +95,20 @@
     {
         "name":"Ardor",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"ardor",
+        "description":"The Ardor Blockchain-as-a-Service Platform was created by Jelurida using the proven features of the solid, reliable Nxt blockchain technology. Ardor extends Nxt for use in certain applications that require scalability and want to avoid “mining” required by some developing blockchains."
     },
     {
-        "name":"Zcoin",
+        "name":"Lisk",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"lisk",
+        "description":"Based on its own Blockchain network and token LSK, Lisk will enable developers to create, distribute and manage decentralized Blockchain applications by deploying their own sidechain linked to the Lisk network, including a custom token."
     },
     {
         "name":"0x",
+        "coinmarketcap_id":"0x",
         "category":"crypto",
-        "description":"placeholder"
+        "description":"0x is an open, permissionless protocol allowing for ERC20 tokens to be traded on the Ethereum blockchain."
     },
     {
         "name":"WAX",
@@ -123,9 +126,10 @@
         "description":"placeholder"
     },
     {
-        "name":"QASH",
+        "name":"Walton",
+        "coinmarketcap_id":"walton",
         "category":"crypto",
-        "description":"placeholder"
+        "description":"Walton is a cryptocurrency whose mission is to extend the block chain technology from Internet to Internet of Things, which will in turn create a genuine, believable, traceable business model with totally shared data and transparent information, depending on the combination of RFID technology and Walton chain."
     },
     {
         "name":"Storj",
@@ -169,21 +173,16 @@
         "description":"placeholder"
     },
     {
-        "name":"Mooncoin",
-        "category":"crypto",
-        "description":"placeholder"
-    },
-    {
         "name":"Aragon",
         "category":"crypto",
         "coinmarketcap_id":"aragon",
         "description":"Aragon is a project that aims to disintermediate the creation and maintenance of organizational structures by using blockchain technology. We want to empower people across the world to easily and securely manage their organizations."
-
     },
     {
         "name":"Tierion",
         "category":"crypto",
-        "description":"placeholder"
+        "coinmarketcap_id":"tierion",
+        "description":"Tierion turns the blockchain into a global platform for verifying any data, file, or process."
     },
     {
         "name":"Skrillex",
@@ -193,7 +192,7 @@
     {
         "name":"Zedd",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Anton Igorevich Zaslavski, better known by his stage name Zedd, is a Russian-German record producer, DJ, musician, multi-instrumentalist and songwriter."
     },
     {
         "name":"Deadmau5",
@@ -202,11 +201,6 @@
     },
     {
         "name":"Hardwell",
-        "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Knife Party",
         "category":"edm",
         "description":"placeholder"
     },
@@ -233,7 +227,7 @@
     {
         "name":"Nero",
         "category":"edm",
-        "description":"placeholder"
+        "description":"Nero is a British electronic music trio composed of members Daniel \"Dan\" Stephens, Joseph \"Joe\" Ray and Alana Watson."
     },
     {
         "name":"Madeon",
@@ -252,11 +246,6 @@
     },
     {
         "name":"Deorro",
-        "category":"edm",
-        "description":"placeholder"
-    },
-    {
-        "name":"Moby",
         "category":"edm",
         "description":"placeholder"
     },
