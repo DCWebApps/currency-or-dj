@@ -31,6 +31,46 @@
         "description":"placeholder"
     },
     {
+        "name":"Ethos",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"0x",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Golem",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Nxt",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Sia",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Stratis",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Steem",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
+        "name":"Verge",
+        "category":"crypto",
+        "description":"placeholder"
+    },
+    {
         "name":"Cardano",
         "coinmarketcap_id":"cardano",
         "category":"crypto",
