@@ -16,7 +16,7 @@ $(function() {
     particlesJS.load('particles', 'data/particles.json', function() {});
     
     // Load game data 
-    $.getJSON('/data/gamedata.json', function(json){
+    $.getJSON('data/gamedata.json', function(json){
         console.log("loaded data: %o", json);
         game_data = json;
         console.log("game data: %o", game_data);
