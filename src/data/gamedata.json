@@ -220,6 +220,21 @@
         "description":"Galantis is a Swedish electronic dance music production, songwriting and DJ duo consisting of Christian Karlsson and Linus Eklöw."
     },
     {
+        "name":"Solomun",
+        "category":"edm",
+        "description":"Solomun has played a major role in redefining European House Music, with productions, remixes and stand-out DJ sets that take the very building blocks of House and sensitively reconstruct them: adding a fresh, ultramodern twist to the genre."
+    },
+    {
+        "name":"Flume",
+        "category":"edm",
+        "description":"Harley Edward Streten, better known by his stage name Flume, is an Australian electronic music instrumentalist, producer and DJ."
+    },
+    {
+        "name":"Carta",
+        "category":"edm",
+        "description":"Carta, aka Giorgio Carta, is a 21-year-old DJ and producer whose sound is very much a product of his surroundings. Born in Hong Kong but with stints in the UK, and now residing in Shanghai, Carta has risen through the ranks thanks to the explosion of dance music in China."
+    },
+    {
         "name":"Kaskade",
         "category":"edm",
         "description":"Ryan Gary Raddon, better known by his stage name Kaskade, is an American DJ, record producer and remixer."
@@ -278,11 +293,6 @@
         "name":"Audien",
         "category":"edm",
         "description":"Nathaniel \"Nate\" Rathbun, better known under his stage name Audien, is an American DJ, record producer and musician. He produces progressive house, trance and electro house. Audien has released many singles and remixes for electronic record labels including Enhanced, Perceptive, Armada, Black Hole, and Nervous."
-    },
-    {
-        "name":"Dubvision",
-        "category":"edm",
-        "description":"placeholder"
     },
     {
         "name":"Chromeo",
