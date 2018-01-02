@@ -3,7 +3,7 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON('package.json'),
       concat:{
           vendor:{
-              src:['src/js/vendor/*.js'],
+              src:['src/js/vendor/jquery-3.2.1.js','src/js/vendor/vue.js','src/js/vendor/particles.js'],
               dest:'build/js/vendor.js'
           },
           app:{
