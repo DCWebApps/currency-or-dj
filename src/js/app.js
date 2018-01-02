@@ -9,15 +9,16 @@ function shuffleArray(a) {
     return a;
 }
 
-function getMarketCap(ticker){
+function getCoinInfo(ticker){
     var xhr = new XMLHttpRequest();
     var url = "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/"
     xhr.open("GET", url, false);
     xhr.send();
     var response = JSON.parse(xhr.responseText);
-    var market_cap = (response[0]["market_cap_usd"]);
-    console.log("Market Cap is: %s", market_cap);
-    return market_cap
+    //var market_cap = (response[0]["market_cap_usd"]);
+    //console.log("Market Cap is: %s", market_cap);
+    console.log("Info = %o", response[0]);
+    return response[0];
 }
 
 var game_data = {};
@@ -70,6 +71,13 @@ var game = new Vue({
             if(this.current_question_idx < (this.game_questions.length - 1)){
                 this.current_question_idx += 1;
                 this.guessed = null; 
+
+                 // If crypto, get market cap
+                 if (this.game_questions[this.current_question_idx].coinmarketcap_id != null){
+                     console.log("Gonna fetch coin info");
+                    this.game_questions[this.current_question_idx].coin_info = getCoinInfo(this.game_questions[this.current_question_idx].coinmarketcap_id);
+                }
+
             }else{
                 // End game, show final results
                 console.log("Game over");
@@ -85,12 +93,6 @@ var game = new Vue({
             if((answer == q.category) || (q.category == "both")){
                 // correct
                 this.guessed_correct = true;
-                
-                // if crypto GET market cap
-                if (q.category == "crypto"){
-                    getMarketCap(this.game_questions[this.current_question_idx].coinmarketcap_id);
-                }
-
                 this.total_correct++;
 
             }else{
