@@ -13,7 +13,7 @@ var game_data = {};
 
 $(function() {
     // Particle effects (mandatory for all blockchain-related websites)
-    particlesJS.load('particles', '/data/particles.json', function() {});
+    particlesJS.load('particles', 'data/particles.json', function() {});
     
     // Load game data 
     $.getJSON('/data/gamedata.json', function(json){
@@ -52,7 +52,7 @@ var game = new Vue({
             this.game_questions = q;
 
         },
-        
+
         total_game_questions: function(){return this.game_questions.length;},
 
         nextQuestion: function(){
