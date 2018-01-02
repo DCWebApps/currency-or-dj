@@ -78,6 +78,8 @@ var game = new Vue({
                 this.isCrypto = true;
                 console.log(this.game_questions[this.current_question_idx].coin_marketcap.toLocaleString('en'));
                 console.log("new testing");
+            }else{
+                this.isCrypto = false;
             }
         },
 
