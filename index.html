@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cryptocurrency or EDM Artist?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+
+<body>
+    <div id="particles"></div>
+
+    <div class="container" id="particles-js">
+        <div class="row" id="title">
+            <div class="col-lg-12">
+                <h1>Currency or DJ?</h1>
+            </div>
+        </div>
+
+
+
+        <div id="game">
+            <div class="row">
+                <div class="col-lg-4 col-md-4"></div>
+
+                <!-- GAME OVER SCREEN -->
+                <div id="summary" v-if="ended" class="col-lg-4 col-md-4 col-sm-12">
+
+                    <h2 class="points">You got {{total_correct}}/{{game_questions.length}}!</h2>
+                    <p class="judgement" v-if="(total_correct/game_questions)>0.5">
+                        You should be a crypto fund manager or a record producer.
+                    </p>
+                    <p class="judgement" v-else>
+                        Don't quit your day job!
+                    </p>
+                    
+                    <p class="share">
+                        <h4>Share your results!</h4>
+                        
+                    </p>
+                        
+
+
+                </div>
+
+                <!-- QUESTION SCREEN -->
+                <div id="question" v-else-if="started" class="col-lg-4 col-md-4 col-sm-12">
+                    <p id="index">Question {{current_question_idx+1}} / {{game_questions.length}}</p>
+                    
+                    <div v-if="guessed">
+                        <p id="explanation">
+                            <span class="youguessed">You guessed <strong>{{game_questions[current_question_idx].name}}</strong> is a 
+                                 <strong>{{game_data.category_names[guessed]}}</strong>.
+                                <br/>
+                                <br/>
+                            </span>
+                            <span class="correct" v-if="guessed_correct">Correct!</span>
+                            <span class="wrong" v-else>Wrong!</span>
+                            <br/>
+                            <span class="description">
+                                {{game_questions[current_question_idx].description}}
+                            </span>
+                        </p>
+                        <button type="button" class="btn btn-lg btn-secondary" v-on:click="nextQuestion">Next</button>
+                    </div>
+                    <div id="choices" v-else>
+                        <h2 id="prompt">{{game_questions[current_question_idx].name}}</h2>
+                        <button type="button" class="btn btn-lg btn-secondary guess" v-on:click="guess('crypto')">Currency</button>
+                        <button type="button" class="btn btn-lg btn-secondary guess" v-on:click="guess('edm')">DJ</button>
+                    </div>
+                </div>
+
+                <!-- LANDING SCREEN -->
+                <div id="landing" class="col-lg-4 col-md-4 col-sm-12" v-else>
+                    <p id="intro-text">
+                        In recent years, both the cryptocurrency and electronic dance music scenes have exploded. 
+                        <br/><br/>
+                        Can you tell which names refer to currencies and which refer to DJs? We bet you can't!
+                        <br/>
+                    </p>
+                    <br/>
+                    <button id="start-game" class="btn btn-primary btn-lg" v-on:click="startGame">Start</button>
+                </div>
+
+                <div class="col-lg-4 col-md-4"></div>
+            </div>
+
+
+        </div>
+
+        <script src="/js/vendor.js"></script>
+        <script src="/js/app.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga = function () {
+                ga.q.push(arguments)
+            };
+            ga.q = [];
+            ga.l = +new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
