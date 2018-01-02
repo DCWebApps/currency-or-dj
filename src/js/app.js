@@ -48,6 +48,7 @@ var game = new Vue({
         guessed_correct:false,
         game_questions:[],
         current_question_idx:0,
+        isCrypto:false,
         total_correct:0
     },
    
@@ -62,21 +63,30 @@ var game = new Vue({
             // Pick the questions for this round from the pool
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
             this.game_questions = q;
+            this.amICrypto();
 
         },
 
         total_game_questions: function(){return this.game_questions.length;},
 
+        amICrypto: function(){
+             // If crypto, get market cap
+            if (this.game_questions[this.current_question_idx].coinmarketcap_id != null){
+                console.log("Gonna fetch coin info");
+                this.game_questions[this.current_question_idx].coin_info = getCoinInfo(this.game_questions[this.current_question_idx].coinmarketcap_id);
+                this.game_questions[this.current_question_idx].coin_marketcap = getCoinInfo(this.game_questions[this.current_question_idx].coinmarketcap_id)["market_cap_usd"];
+                this.isCrypto = true;
+                console.log(this.game_questions[this.current_question_idx].coin_marketcap.toLocaleString('en'));
+                console.log("new testing");
+            }
+        },
+
         nextQuestion: function(){
+            this.amICrypto();
             if(this.current_question_idx < (this.game_questions.length - 1)){
                 this.current_question_idx += 1;
                 this.guessed = null; 
 
-                 // If crypto, get market cap
-                 if (this.game_questions[this.current_question_idx].coinmarketcap_id != null){
-                     console.log("Gonna fetch coin info");
-                    this.game_questions[this.current_question_idx].coin_info = getCoinInfo(this.game_questions[this.current_question_idx].coinmarketcap_id);
-                }
 
             }else{
                 // End game, show final results
