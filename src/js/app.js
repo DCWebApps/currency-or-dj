@@ -111,6 +111,7 @@ var game = new Vue({
                 // wrong 
                 this.guessed_correct = false; 
             }
+            this.amICrypto();
         }
     }
 });
