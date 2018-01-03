@@ -69,8 +69,6 @@
                             <span class="description">
                                 {{game_questions[current_question_idx].description}}
                             </span>
-                            <span  v-if= "isCrypto == true" class="market_cap">${{Number(game_questions[current_question_idx].coin_marketcap).toLocaleString('en')}} </span>
-
                         </p>
                         <button type="button" class="btn btn-lg btn-secondary" v-on:click="nextQuestion">Next</button>
                     </div>
