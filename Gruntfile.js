@@ -50,6 +50,16 @@ module.exports = function(grunt) {
               'expand':true
             }
       },
+      minifyHtml: {
+        options: {
+            cdata: true
+        },
+        dist: {
+            files: {
+                'build/index.html': 'src/html/index.html'
+            }
+        }
+      },
       watch: {
             scripts: {
               files: ['src/**'],
@@ -93,13 +103,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-json-minify');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-http');
+    grunt.loadNpmTasks('grunt-minify-html');
 
 
     grunt.registerTask('default', ['concat', 'copy', 'less']);
 
     grunt.registerTask('dev', ['default','connect', 'watch']);
 
-    grunt.registerTask('prod', ['clean','default','uglify', 'json-minify']);
+    grunt.registerTask('prod', ['clean','default','uglify', 'minifyHtml', 'json-minify']);
 
     grunt.registerTask('publish', ['prod', 'gh-pages']);
   };
