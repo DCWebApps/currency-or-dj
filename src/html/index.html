@@ -77,8 +77,8 @@
                     </div>
                     <div id="choices" v-else>
                         <h2 id="prompt">{{game_questions[current_question_idx].name}}</h2>
-                        <button type="button" class="btn btn-lg guess" v-on:click="guess('crypto')">Currency</button>
-                        <button type="button" class="btn btn-lg guess" v-on:click="guess('edm')">DJ</button>
+                        <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('crypto')">Currency</button>
+                        <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('edm')">DJ</button>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        
+
         <script src="js/vendor.js"></script>
         <script src="js/app.js"></script>
 
