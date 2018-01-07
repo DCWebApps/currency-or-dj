@@ -52,12 +52,12 @@
             "name": "Nxt",
             "coinmarketcap_id": "nxt",
             "category": "crypto",
-            "description": "placeholder"
+            "description": "Nxt is an advanced blockchain platform which builds on and improves the basic functionality of pioneering cryptocurrencies such as Bitcoin."
         },
         {
             "name": "Sia",
             "category": "both",
-            "description": "Sia is both. Sia splits apart, encrypts, and distributes your files across a decentralized network.\n\nSia also refers to Sia Kate Isobelle Furler, an Australian singer-songwriter, record producer and music video director.",
+            "description": "Sia is both. Sia splits apart, encrypts, and distributes your files across a decentralized network.<br/><br/>Sia also refers to Sia Kate Isobelle Furler, an Australian singer-songwriter, record producer and music video director.",
             "coinmarketcap_id": "siacoin"
         },
         {
@@ -95,7 +95,7 @@
             "name": "Neo",
             "category": "both",
             "coinmarketcap_id": "neo",
-            "description": "Neo is both. DJ Neo is one of the internationally best-known music producers for harder electronic sounds (Hardstyle).\n\nNeo is also a non-profit community-based blockchain project that utilizes blockchain technology and digital identity to digitize assets, to automate the management of digital assets using smart contracts, and to realize a \"smart economy\" with a distributed network."
+            "description": "Neo is both. DJ Neo is one of the internationally best-known music producers for harder electronic sounds (Hardstyle).<br/><br/>Neo is also a non-profit community-based blockchain project that utilizes blockchain technology and digital identity to digitize assets, to automate the management of digital assets using smart contracts, and to realize a \"smart economy\" with a distributed network."
         },
         {
             "name": "Zcash",
