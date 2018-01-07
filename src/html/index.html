@@ -68,10 +68,10 @@
                             <span class="correct" v-if="guessed_correct">Correct!</span>
                             <span class="wrong" v-else>Wrong!</span>
                             <br/>
-                            <span class="description">
-                                {{game_questions[current_question_idx].description}}
+                            <!-- use raw html for descriptions -->
+                            <span class="description" v-html="game_questions[current_question_idx].description">
                             </span>
-                             <span  v-if= "isCrypto == true" class="market_cap">${{Number(game_questions[current_question_idx].coin_marketcap).toLocaleString('en')}} </span>
+                             <span  v-if= "isCrypto == true" class="market_cap">It has a market cap of ${{Number(game_questions[current_question_idx].coin_marketcap).toLocaleString('en')}}.</span>
                         </p>
                         <button type="button" class="btn btn-lg btn-default" v-on:click="nextQuestion">Next</button>
                     </div>
