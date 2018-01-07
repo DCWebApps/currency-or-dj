@@ -7,7 +7,7 @@ module.exports = function(grunt) {
               dest:'build/js/vendor.js'
           },
           app:{
-              src:['src/js/*.js'],
+              src:['src/js/util.js','src/js/app.js'],
               dest:'build/js/app.js'
           }
       },
