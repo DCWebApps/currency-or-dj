@@ -11,20 +11,32 @@ function shuffleArray(a) {
 
 var game_data = {};
 
+
+// Page Load 
 $(function() {
     // Particle effects (mandatory for all blockchain-related websites)
     particlesJS.load('particles', 'data/particles.json', function() {});
     
     // Load game data 
     $.getJSON('data/gamedata.json', function(json){
-        console.log("loaded data: %o", json);
+        console.log("Loaded game data");
         game_data = json;
-        console.log("game data: %o", game_data);
+        checkGameData();
     },
     function(error){
         alert("Could not load game data.");
     });
 });
+
+
+ // Make sure we have enough of each category for a fair game.
+ function checkGameData(){
+    var totals = {};
+    $.each(game_data.questions, function(idx, q){
+        totals[q.category] = totals[q.category] ? totals[q.category] + 1 : 1;
+    }); 
+    console.log("Deck Totals: %o", totals);
+};
 
 
 var game = new Vue({
@@ -52,13 +64,10 @@ var game = new Vue({
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
             this.game_questions = q;
             this.preLoadCoinInfo();
-
         },
 
-        total_game_questions: function(){return this.game_questions.length;},
-
+        // Fetch market caps for everything 
         preLoadCoinInfo: function(){
-
             $.each(this.game_questions, function (i, item) {
                 ticker = item.coinmarketcap_id;
                 if (item["coinmarketcap_id"] != null){
@@ -84,17 +93,18 @@ var game = new Vue({
         nextQuestion: function(){
             console.log("resettting state")
             this.isCrypto = false;
+
             if(this.current_question_idx < (this.game_questions.length - 1)){
                 this.current_question_idx += 1;
                 this.guessed = null; 
-
-
             }else{
                 // End game, show final results
                 console.log("Game over");
                 this.ended = true; 
             }
         },
+
+       
 
         guess: function(answer){
             console.log("guessed: %o", answer);
