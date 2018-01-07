@@ -9,6 +9,12 @@ function shuffleArray(a) {
     return a;
 }
 
+function getRandomDate() {
+     var start = new Date(2017, 0, 1)
+     var end = new Date(2017, 11, 30)
+     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
 var game_data = {};
 
 
@@ -49,7 +55,8 @@ var game = new Vue({
         game_questions:[],
         current_question_idx:0,
         isCrypto:false,
-        total_correct:0
+        total_correct:0,
+        historicalDate:null
     },
    
     methods:{
@@ -64,6 +71,9 @@ var game = new Vue({
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
             this.game_questions = q;
             this.preLoadCoinInfo();
+
+            //ge random date.
+            this.historicalDate = getRandomDate();
         },
 
         // Fetch market caps for everything 
