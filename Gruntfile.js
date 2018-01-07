@@ -3,7 +3,11 @@ module.exports = function(grunt) {
       pkg: grunt.file.readJSON('package.json'),
       concat:{
           vendor:{
-              src:['src/js/vendor/jquery-3.2.1.js','src/js/vendor/vue.js','src/js/vendor/particles.js'],
+              src:['src/js/vendor/jquery-3.2.1.js',
+                   'src/js/vendor/vue.js',
+                   'src/js/vendor/particles.js',
+                   'src/js/vendor/fontawesome/fontawesome-all.js'
+                  ],
               dest:'build/js/vendor.js'
           },
           app:{
@@ -32,23 +36,29 @@ module.exports = function(grunt) {
       },
       copy:{
           html:{
-            'cwd':'src/html',
-            'src':'*.html',
-            'dest':'build',
-            'expand':true
+                'cwd':'src/html',
+                'src':'*.html',
+                'dest':'build',
+                'expand':true
             },
             data:{
-            'cwd':'src/data',
-            'src':'**',
-            'dest':'build/data',
-            'expand':true
+                'cwd':'src/data',
+                'src':'**',
+                'dest':'build/data',
+                'expand':true
             },
             img:{
               'cwd':'src/img',
               'src':'**',
               'dest':'build/img',
               'expand':true
-            }
+            },
+            fontawesome:{
+                'cwd':'src/css',
+                'src':'**',
+                'dest':'build/css',
+                'expand':true
+              },
       },
       minifyHtml: {
         options: {
