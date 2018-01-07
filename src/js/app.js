@@ -63,21 +63,20 @@ var game = new Vue({
                 ticker = item.coinmarketcap_id;
                 if (item["coinmarketcap_id"] != null){
                     $.ajax({
-                        url: "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/", // path to file
-                        dataType: 'json', // type of file (text, json, xml, etc)
-                        success: function(data) { // callback for successful completion
-                            this.isCrypto = true;
+                        url: "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/",
+                        dataType: 'json', 
+                        success: function(data) { 
                             item.coin_info = data[0];
                             item.coin_marketcap = data[0]["market_cap_usd"];
                             console.log(item.coin_marketcap.toLocaleString('en'));
                         },
-                        error: function() { // callback if there's an error
+                        error: function() { 
                             console.log("error featching token info");
                         }
                     });  
                 }
                 else{
-                    this.isCrypto = false;
+                    // leave for DJ info/calls or we cold hard code into json file.
                 }
             });
         },
