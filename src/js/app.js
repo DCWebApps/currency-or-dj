@@ -9,18 +9,6 @@ function shuffleArray(a) {
     return a;
 }
 
-function getCoinInfo(ticker){
-    var xhr = new XMLHttpRequest();
-    var url = "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/"
-    xhr.open("GET", url, false);
-    xhr.send();
-    var response = JSON.parse(xhr.responseText);
-    //var market_cap = (response[0]["market_cap_usd"]);
-    //console.log("Market Cap is: %s", market_cap);
-    console.log("Info = %o", response[0]);
-    return response[0];
-}
-
 var game_data = {};
 
 $(function() {
@@ -63,28 +51,40 @@ var game = new Vue({
             // Pick the questions for this round from the pool
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
             this.game_questions = q;
-            this.amICrypto();
+            this.preLoadCoinInfo();
 
         },
 
         total_game_questions: function(){return this.game_questions.length;},
 
-        amICrypto: function(){
-             // If crypto, get market cap
-            if (this.game_questions[this.current_question_idx].coinmarketcap_id != null){
-                console.log("Gonna fetch coin info");
-                this.game_questions[this.current_question_idx].coin_info = getCoinInfo(this.game_questions[this.current_question_idx].coinmarketcap_id);
-                this.game_questions[this.current_question_idx].coin_marketcap = getCoinInfo(this.game_questions[this.current_question_idx].coinmarketcap_id)["market_cap_usd"];
-                this.isCrypto = true;
-                console.log(this.game_questions[this.current_question_idx].coin_marketcap.toLocaleString('en'));
-                console.log("new testing");
-            }else{
-                this.isCrypto = false;
-            }
+        preLoadCoinInfo: function(){
+
+            $.each(this.game_questions, function (i, item) {
+                ticker = item.coinmarketcap_id;
+                if (item["coinmarketcap_id"] != null){
+                    $.ajax({
+                        url: "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/", // path to file
+                        dataType: 'json', // type of file (text, json, xml, etc)
+                        success: function(data) { // callback for successful completion
+                            this.isCrypto = true;
+                            item.coin_info = data[0];
+                            item.coin_marketcap = data[0]["market_cap_usd"];
+                            console.log(item.coin_marketcap.toLocaleString('en'));
+                        },
+                        error: function() { // callback if there's an error
+                            console.log("error featching token info");
+                        }
+                    });  
+                }
+                else{
+                    this.isCrypto = false;
+                }
+            });
         },
 
         nextQuestion: function(){
-            this.amICrypto();
+            console.log("resettting state")
+            this.isCrypto = false;
             if(this.current_question_idx < (this.game_questions.length - 1)){
                 this.current_question_idx += 1;
                 this.guessed = null; 
@@ -100,8 +100,14 @@ var game = new Vue({
         guess: function(answer){
             console.log("guessed: %o", answer);
             this.guessed = answer;
-
             var q = this.game_questions[this.current_question_idx];
+
+            if(q.category == "crypto" || q.category == "both"){
+                this.isCrypto = true;
+            }else if(q.category == "edm"){
+                this.isCrypto = false;
+            }
+
             if((answer == q.category) || (q.category == "both")){
                 // correct
                 this.guessed_correct = true;
@@ -109,9 +115,8 @@ var game = new Vue({
 
             }else{
                 // wrong 
-                this.guessed_correct = false; 
+                this.guessed_correct = false;    
             }
-            this.amICrypto();
         }
     }
 });
