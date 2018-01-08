@@ -60,7 +60,6 @@ var game = new Vue({
 
             //ge random date.
             this.historicalDate = getRandomDate();
-            console.log(Math.floor(this.historicalDate/ 1000))
         },
 
         // Fetch market caps for everything 
@@ -128,10 +127,11 @@ var game = new Vue({
             // .show, .animate, .delay, etc, but it doesn't seem to be working.
 
             overlay.show();
-            overlay.animate({opacity:1},75, function(){
-                shown_callback(); // advance game state while overlay is shown
+            overlay.animate({opacity:1},100, function(){
+                 // advance game state while overlay is shown
                 window.setTimeout(function(){
-                    overlay.animate({opacity:0}, 75, function(){
+                    shown_callback();
+                    overlay.animate({opacity:0},100, function(){
                         overlay.hide();
                     });
                 }, 300);

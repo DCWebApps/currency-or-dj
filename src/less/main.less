@@ -163,6 +163,21 @@ body{
 
 // Right / Wrong Overlays
 
+@keyframes zoomin {
+    0% {transform: scale(1)};
+    100% {transform: scale(3.0);}
+}
+
+@keyframes fadein {
+    0% {
+        opacity:0
+    }
+
+    100% {
+        opacity:1;
+    }
+}   
+
 .overlay{
     position:absolute;
     left:0;
@@ -172,16 +187,21 @@ body{
     z-index:100;
     text-align:center;
     padding-top:20%;
+    
 
     p{
-        font-size:450%;
+        font-size:250%;
         font-weight:bold;
         color:#fff;
         letter-spacing:0.15em;
+        animation: zoomin;
+        animation-duration: 0.5s;
     }
 
     display:none;
     opacity:0;
+    animation: fadein;
+    animation-duration: 0.25s;
 }
 
 #right-overlay{
@@ -191,3 +211,4 @@ body{
 #wrong-overlay{
     background:#600;
 }
+
