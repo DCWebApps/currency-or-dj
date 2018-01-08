@@ -207,11 +207,13 @@
             "name": "Red Pulse",
             "category": "crypto",
             "coinmarketcap_id": "red-pulse",
+            "cryptocompare_symbol": "RPX",
             "description": "Red Pulse will introduce a token, RPX, that will power a brand new content production, distribution, and consumption platform focused initially on China’s capital markets. Our vision is to create a direct-incentivization ecosystem facilitated by the RPX token, creating a global community of colleagues."
         },
         {
             "name": "Aragon",
             "coinmarketcap_id": "aragon",
+            "cryptocompare_symbol": "ANT",
             "category": "crypto",
             "description": "Aragon is a project that aims to disintermediate the creation and maintenance of organizational structures by using blockchain technology. We want to empower people across the world to easily and securely manage their organizations."
         },
@@ -219,6 +221,7 @@
             "name": "Tierion",
             "category": "crypto",
             "coinmarketcap_id": "tierion",
+            "cryptocompare_symbol": "TNT",
             "description": "Tierion turns the blockchain into a global platform for verifying any data, file, or process."
         },
         {
