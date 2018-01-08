@@ -32,8 +32,8 @@
         </div>
 
         <!-- GAME -->
-        <div id="game" class="row" v-cloak>
-
+        <div id="game"  v-cloak>
+            <div class="row">
             <div id="game-body" class="col-lg-5 col-md-5 col-sm-12">
                 <!-- GAME OVER / SUMMARY SCREEN -->
                 <div id="summary" v-if="ended">
@@ -96,9 +96,9 @@
                     <div id="choices" v-else>
                         <h2 id="prompt">{{game_questions[current_question_idx].name}}</h2>
                         <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('crypto')">
-                            <i class="fab fa-bitcoin"></i> Currency</button>
+                            <i class="fab fa-bitcoin fa-2x"></i><br/> Currency</button>
                         <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('edm')">
-                            <i class="fas fa-headphones"></i> DJ</button>
+                            <i class="fas fa-headphones fa-2x"></i><br/> DJ</button>
                     </div>
                 </div>
 
@@ -115,25 +115,26 @@
                 </div>
             </div>
 
-        </div>
 
-
-        <!-- Colophon -->
-
-        <div class="row">
-
-
-            <div class="col-lg-12 col-md-12 col-sm-12" id="colophon">
-                <p>Brought to you by
-                    <a href="http://twitter.com/dangrover">@dangrover</a> and
-                    <a href="http://twitter.com/mzaveri">@mzaveri</a>.
-                    <a href="http://github.com/dangrover/crypto-or-edm">Fork on Github</a>
-                </p>
-              
             </div>
 
+            <div class="row" v-if="!started || ended">
+                    <div class="col-lg-12 col-md-12 col-sm-12" id="colophon">
+                        <p>by
+                            <a href="http://twitter.com/dangrover">@dangrover</a> and
+                            <a href="http://twitter.com/mzaveri">@mzaveri</a>.
+                            <a href="http://github.com/dangrover/crypto-or-edm">Fork on Github</a>
+                        </p>
+                    </div>
+            </div>
 
         </div>
+
+        <!-- CREDITS -->
+
+       
+
+        
 
 
     </div>

@@ -55,7 +55,6 @@ var game = new Vue({
             // Pick the questions for this round from the pool
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
             this.game_questions = q;
-
             // pre-loading coin information.
             this.preLoadCoinInfo();
         },
@@ -119,7 +118,7 @@ var game = new Vue({
         },
 
         nextQuestion: function(){
-            console.log("resettting state")
+            console.log("Next question")
             this.isCrypto = false;
 
             if(this.current_question_idx < (this.game_questions.length - 1)){
@@ -159,10 +158,11 @@ var game = new Vue({
             // .show, .animate, .delay, etc, but it doesn't seem to be working.
 
             overlay.show();
-            overlay.animate({opacity:1},75, function(){
-                shown_callback(); // advance game state while overlay is shown
+            overlay.animate({opacity:1},100, function(){
+                 // advance game state while overlay is shown
                 window.setTimeout(function(){
-                    overlay.animate({opacity:0}, 75, function(){
+                    shown_callback();
+                    overlay.animate({opacity:0},100, function(){
                         overlay.hide();
                     });
                 }, 300);
