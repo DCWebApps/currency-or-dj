@@ -24,7 +24,15 @@ body{
     text-align:center;
     margin-top:2em;
     padding-bottom:1em;
-   
+}
+
+#game-body{
+    float: none;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.2);
+    padding:2em;
+    border-radius:0.25em;
+    margin-top:2em;
 }
 
 #landing{
@@ -32,7 +40,6 @@ body{
     color:#eee;
 
     #intro-text{
-        margin-top:2em;
         font-size:125%;
     }
 
@@ -68,7 +75,6 @@ body{
 
     #explanation{
         color:#eee;
-        margin-top:2em;
         margin-bottom:2em;
 
         .correct{
@@ -147,4 +153,35 @@ body{
         text-decoration: none; 
         border-bottom: #bbb solid 1px; 
     }
+}
+
+// Right / Wrong Overlays
+
+.overlay{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:100;
+    text-align:center;
+    padding-top:20%;
+
+    p{
+        font-size:500%;
+        font-weight:bold;
+        color:#fff;
+        letter-spacing:0.15em;
+    }
+
+    display:none;
+    opacity:0;
+}
+
+#right-overlay{
+    background:#060;
+}
+
+#wrong-overlay{
+    background:#600;
 }
