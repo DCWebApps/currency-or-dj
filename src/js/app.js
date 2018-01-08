@@ -122,20 +122,31 @@ var game = new Vue({
             }
         },
 
+        // Sharing 
+
         shareWhatsApp: function(){
             var query_params = {
-                text:"I got "+this.total_correct+"/"+this.game_questions.length+" correct on Currency or DJ! Can you beat me? "+location.href
+                text: "I got "+this.total_correct+"/"+this.game_questions.length+" correct on Currency or DJ! Can you beat me? "+location.href
             };
-            location.href = 'whatsapp://send?' + encodeQueryData(query_params)
+            location.href = 'whatsapp://send?' + encodeQueryData(query_params);
         },
 
         shareFacebook: function(){
+            console.log("FB share");
+            var query_params = {
+                app_id: 1170322286433316,
+                display: "popup",
+                href: location.href
+            };
 
+            var share_url = 'https://www.facebook.com/dialog/share?' + encodeQueryData(query_params);
+            console.log("Opening %s", share_url);
+            location.href = share_url;
         },
 
         shareTwitter: function(){
             var query_params = {
-                text: "I got "+this.total_correct+"/"+this.game_questions.length+" correct on Currency or DJ!",
+                text: "I got "+this.total_correct+"/"+this.game_questions.length+" right on \"Currency or DJ?\" Can you beat me?",
                 url:location.href,
                 related:'dangrover,mzaveri'
             }
@@ -145,14 +156,16 @@ var game = new Vue({
 
         shareMessenger: function(){
             // Only works on mobile
-            var app_id = 1170322286433316;
-            window.open('fb-messenger://share?link=' + encodeURIComponent(link) + '&app_id=' + encodeURIComponent(app_id));
+            var query_params = {
+                app_id: 1170322286433316,
+                link: window.location
+            };
+
+            window.open('fb-messenger://share?' + encodeQueryData(query_params));
         },
 
         shareTelegram: function(){
             location.href='https://t.me/share/url?url='+encodeURIComponent(location.href);
         }
-
-
     }
 });
