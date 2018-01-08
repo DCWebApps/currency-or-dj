@@ -93,12 +93,19 @@ module.exports = function(grunt) {
     }
     },
     'json-minify': {
-    build: {
-      files: 'build/**/*.json'
+        build: {
+            files: 'build/**/*.json'
+        },
+    },
+    cacheBust: {
+        default: {
+            options: {
+                assets: ['build/js/**','build/css/**'],
+                queryString: true  
+            },
+            src: ['build/index.html']
+        }
     }
-  },
-  
-  
    });
   
   
@@ -114,11 +121,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-http');
     grunt.loadNpmTasks('grunt-minify-html');
+    grunt.loadNpmTasks('grunt-cache-bust');
 
 
-    grunt.registerTask('default', ['concat', 'copy', 'less']);
+    grunt.registerTask('default', ['concat', 'copy', 'less', 'cacheBust']);
 
-    grunt.registerTask('dev', ['default','connect', 'watch']);
+    grunt.registerTask('dev', ['default', 'connect', 'watch']);
 
     grunt.registerTask('prod', ['clean','default','uglify', 'minifyHtml', 'json-minify']);
 
