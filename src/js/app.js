@@ -39,8 +39,7 @@ var game = new Vue({
         game_questions:[],
         current_question_idx:0,
         isCrypto:false,
-        total_correct:0,
-        historicalDate:null
+        total_correct:0
     },
    
     methods:{
@@ -56,34 +55,66 @@ var game = new Vue({
             // Pick the questions for this round from the pool
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);
             this.game_questions = q;
-            this.preLoadCoinInfo();
 
-            //ge random date.
-            this.historicalDate = getRandomDate();
-            console.log(Math.floor(this.historicalDate/ 1000))
+            // pre-loading coin information.
+            this.preLoadCoinInfo();
         },
 
-        // Fetch market caps for everything 
+        // Fetch Coin INfo
         preLoadCoinInfo: function(){
+            //get random date.
+            var random_date = getRandomDate();
+            var ranom_date_unix = (Math.floor(random_date/ 1000));
+
             $.each(this.game_questions, function (i, item) {
-                ticker = item.coinmarketcap_id;
-                if (item["coinmarketcap_id"] != null){
-                    $.ajax({
-                        url: "https://api.coinmarketcap.com/v1/ticker/" + ticker + "/",
-                        dataType: 'json', 
-                        success: function(data) { 
-                            item.coin_info = data[0];
-                            item.coin_marketcap = data[0]["market_cap_usd"];
-                            console.log(item.coin_marketcap.toLocaleString('en'));
-                        },
-                        error: function() { 
-                            console.log("error featching token info");
-                        }
+                ticker = item.cryptocompare_symbol;
+                if (item["cryptocompare_symbol"] != null){
+
+                    $.when(
+                        $.ajax({
+                            url: `https://min-api.cryptocompare.com/data/pricehistorical?fsym=${item.cryptocompare_symbol}&tsyms=USD&ts=${ranom_date_unix}`,
+                            dataType: 'json', 
+                            success: function(data) { 
+                                item.historcal_usd_value = data[item.cryptocompare_symbol]["USD"];
+                                item.coin_info = data[0];
+                            },
+                            error: function() { 
+                                console.log("error featching token info");
+                            }
+                        })
+
+                    ).then(function() {
+
+                        $.ajax({
+                            url: `https://min-api.cryptocompare.com/data/price?fsym=${item.cryptocompare_symbol}&tsyms=USD`,
+                            dataType: 'json', 
+                            success: function(data) { 
+                                item.current_usd_value = data["USD"];
+
+                                //what is $1k worth today
+                                var investment = "1000.00";
+                                var total_coins = investment / item.historcal_usd_value;
+                                var value_of_investment = item.current_usd_value * total_coins;
+                                item.today_value = value_of_investment;
+
+                                //localize date
+                                var options = {year: 'numeric', month: 'long', day: 'numeric'};
+                                item.historical_date = random_date.toLocaleString('en-US', options);
+
+                                // item.coin_marketcap = data["USD"];
+                                // console.log(item.coin_marketcap.toLocaleString('en'));
+                            },
+                            error: function() { 
+                                console.log("error featching token info");
+                            }
+                        })
+
                     });  
                 }
                 else{
                     // leave for DJ info/calls or we cold hard code into json file.
                 }
+
             });
         },
 
