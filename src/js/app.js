@@ -50,6 +50,8 @@ var game = new Vue({
             this.current_question_idx = 0;
             this.total_correct = 0;
             this.game_data = game_data;
+            this.isCrypto = false; 
+            this.guessed = false;
 
             // Pick the questions for this round from the pool
             var q = shuffleArray(game_data.questions).slice(0, game_data.game_rules.questions_per_game);

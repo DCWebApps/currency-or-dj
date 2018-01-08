@@ -17,6 +17,8 @@
     <meta property="og:description" content="Can you guess which names refer to cryptocurrencies and which refer to DJs? We bet you can't!"
     />
     <meta name="description" content="Can you guess which names refer to cryptocurrencies and which refer to DJs? We bet you can't!">
+    <meta property="og:image" content="https://dangrover.github.io/crypto-or-edm/img/logo-with-bg-large.png" />
+
 </head>
 
 <body>
@@ -55,9 +57,12 @@
                             <a v-on:click="shareMessenger"><i class="fab fa-facebook-messenger"></i></a>
                             <a v-on:click="shareWhatsApp"><i class="fab fa-whatsapp"></i></a>
                             <a v-on:click="shareTelegram"><i class="fab fa-telegram"></i></a>
-
                     </span>
+                </div>
 
+                <div class="playagain">
+                    <p>or</p>
+                    <button id="start-game" class="btn btn-default" v-on:click="startGame">Play Again</button>
                 </div>
             </div>
 
@@ -81,12 +86,12 @@
                         </span>
                         <span v-if="isCrypto == true" class="market_cap">It has a market cap of ${{Number(game_questions[current_question_idx].coin_marketcap).toLocaleString('en')}}.</span>
                     </p>
-                    <button type="button" class="btn btn-lg btn-default" v-on:click="nextQuestion">Next</button>
+                    <button type="button" class="btn btn-lg btn-default" v-on:click="nextQuestion">Next <i class="fas fa-caret-right"></i></button>
                 </div>
                 <div id="choices" v-else>
                     <h2 id="prompt">{{game_questions[current_question_idx].name}}</h2>
-                    <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('crypto')">Currency</button>
-                    <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('edm')">DJ</button>
+                    <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('crypto')"><i class="fab fa-bitcoin"></i> Currency</button>
+                    <button type="button" class="btn btn-lg btn-default guess" v-on:click="guess('edm')"><i class="fas fa-headphones"></i> DJ</button>
                 </div>
             </div>
 
@@ -110,10 +115,10 @@
         <!-- Colophon -->
 
         <div class="row">
-            <div class="col-lg-4 col-md-4"></div>
+            
 
-            <div class="col-lg-4 col-md-4 col-sm-12" id="colophon">
-                <p>This waste of time brought to you by
+            <div class="col-lg-12 col-md-12 col-sm-12" id="colophon">
+                <p>Brought to you by
                 <a href="http://twitter.com/dangrover">@dangrover</a> and
                 <a href="http://twitter.com/mzaveri">@mzaveri</a>.
                 </p>
@@ -122,7 +127,7 @@
                 </p>
             </div>
 
-            <div class="col-lg-4 col-md-4"></div>
+           
         </div>
 
 

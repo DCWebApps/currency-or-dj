@@ -6,7 +6,8 @@ module.exports = function(grunt) {
               src:['src/js/vendor/jquery-3.2.1.js',
                    'src/js/vendor/vue.js',
                    'src/js/vendor/particles.js',
-                   'src/js/vendor/fontawesome/fontawesome-all.js'
+                   'src/js/vendor/fontawesome/fontawesome-all.js',
+                   'src/js/vendor/fontawesome/retina.js'
                   ],
               dest:'build/js/vendor.js'
           },
