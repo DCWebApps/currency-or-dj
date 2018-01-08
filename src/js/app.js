@@ -1,5 +1,3 @@
-
-
 var game_data = {};
 
 
