@@ -28,9 +28,7 @@
     <div class="container">
         <!-- TITLE -->
         <div class="row" id="title">
-            <div class="col-lg-12">
-                <img src="img/logo.png" alt="Currency or DJ?" />
-            </div>
+             <img src="img/logo.png" alt="Currency or DJ?" />
         </div>
 
         <!-- GAME -->
@@ -82,19 +80,11 @@
 
                     <div v-if="guessed">
                         <p id="explanation">
-                            <span class="youguessed">You guessed
-                                <strong>{{game_questions[current_question_idx].name}}</strong> is a
-                                <strong>{{game_data.category_names[guessed]}}</strong>.
-                                <br/>
-                                <br/>
-                            </span>
-                            <span class="correct" v-if="guessed_correct">Correct!</span>
-                            <span class="wrong" v-else>Wrong!</span>
-                            <br/>
+                            
                             <!-- use raw html for descriptions -->
                             <span class="description" v-html="game_questions[current_question_idx].description">
                             </span>
-                            <span v-if="isCrypto == true" class="market_cap">It has a market cap of ${{Number(game_questions[current_question_idx].coin_marketcap).toLocaleString('en')}}.</span>
+                            <span v-if="isCrypto" class="market_cap">It has a market cap of ${{Number(game_questions[current_question_idx].coin_marketcap).toLocaleString('en')}}.</span>
                         </p>
                         <button type="button" class="btn btn-lg btn-default" v-on:click="nextQuestion">Next
                             <i class="fas fa-caret-right"></i>

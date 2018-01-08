@@ -104,28 +104,41 @@ var game = new Vue({
 
         guess: function(answer){
             console.log("guessed: %o", answer);
-            this.guessed = answer;
             var q = this.game_questions[this.current_question_idx];
+            var is_correct = (answer == q.category) || (q.category == "both"); 
+            var game = this;
 
-            if(q.category == "crypto" || q.category == "both"){
-                this.isCrypto = true;
-            }else if(q.category == "edm"){
-                this.isCrypto = false;
-            }
-
-            if((answer == q.category) || (q.category == "both")){
-                // correct
-                this.guessed_correct = true;
-                this.total_correct++;
-
-            }else{
-                // wrong 
-                this.guessed_correct = false;    
-            }
+            this.flashOverlay(is_correct ? 'right' : 'wrong', 
+                function(){
+                    game.guessed = answer;
+                    game.isCrypto = (q.category != "edm");
+                
+                    if(is_correct){
+                        game.total_correct++;
+                    }
+            });
         },
 
-        // Sharing 
+        // Two overlay divs on the page for fullscreen "WRONG" or "RIGHT"
+        flashOverlay: function(name, shown_callback){
+            var overlay = $("#"+name+"-overlay");
 
+            // There is a nifty way to do this by chaining together
+            // .show, .animate, .delay, etc, but it doesn't seem to be working.
+
+            overlay.show();
+            overlay.animate({opacity:1},75, function(){
+                shown_callback(); // advance game state while overlay is shown
+                window.setTimeout(function(){
+                    overlay.animate({opacity:0}, 75, function(){
+                        overlay.hide();
+                    });
+                }, 300);
+            });
+        },
+
+
+        // Sharing 
         shareWhatsApp: function(){
             var query_params = {
                 text: "I got "+this.total_correct+"/"+this.game_questions.length+" correct on Currency or DJ! Can you beat me? "+location.href
