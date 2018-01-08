@@ -63,11 +63,12 @@ module.exports = function(grunt) {
       },
       minifyHtml: {
         options: {
-            cdata: true
+            cdata: true,
+            removeAttributeQuotes:false,
         },
         dist: {
             files: {
-                'build/index.html': 'src/html/index.html'
+                'build/index.html': 'build/index.html'
             }
         }
       },
