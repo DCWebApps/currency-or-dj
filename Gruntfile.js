@@ -106,6 +106,13 @@ module.exports = function(grunt) {
             },
             src: ['build/index.html']
         }
+    },
+    cssmin: {
+        default: {
+            files:{
+                'build/css/fa-svg-with-js.css':['build/css/fa-svg-with-js.css']
+            }
+        }
     }
    });
   
@@ -123,13 +130,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-http');
     grunt.loadNpmTasks('grunt-minify-html');
     grunt.loadNpmTasks('grunt-cache-bust');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-
+    // Tasks 
     grunt.registerTask('default', ['concat', 'copy', 'less', 'cacheBust']);
 
     grunt.registerTask('dev', ['default', 'connect', 'watch']);
 
-    grunt.registerTask('prod', ['clean','default','uglify', 'minifyHtml', 'json-minify']);
+    grunt.registerTask('prod', ['clean','default','uglify', 'minifyHtml', 'json-minify','cssmin']);
 
     grunt.registerTask('publish', ['prod', 'gh-pages']);
   };
