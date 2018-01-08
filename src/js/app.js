@@ -87,7 +87,7 @@ var game = new Vue({
         },
 
         nextQuestion: function(){
-            console.log("resettting state")
+            console.log("Next question")
             this.isCrypto = false;
 
             if(this.current_question_idx < (this.game_questions.length - 1)){
