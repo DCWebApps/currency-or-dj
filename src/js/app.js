@@ -60,6 +60,7 @@ var game = new Vue({
 
             //ge random date.
             this.historicalDate = getRandomDate();
+            console.log(Math.floor(this.historicalDate/ 1000))
         },
 
         // Fetch market caps for everything 
