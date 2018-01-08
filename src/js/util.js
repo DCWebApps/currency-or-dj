@@ -14,3 +14,10 @@ function getRandomDate() {
      var end = new Date(2017, 11, 30)
      return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 }
+
+function encodeQueryData(data) {
+    let ret = [];
+    for (let d in data)
+      ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
+    return ret.join('&');
+ }

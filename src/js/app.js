@@ -122,6 +122,39 @@ var game = new Vue({
                 // wrong 
                 this.guessed_correct = false;    
             }
+        },
+
+        shareWhatsApp: function(){
+            var query_params = {
+                text:"I got "+this.total_correct+"/"+this.game_questions.length+" correct on Currency or DJ! Can you beat me? "+location.href
+            };
+            location.href = 'whatsapp://send?' + encodeQueryData(query_params)
+        },
+
+        shareFacebook: function(){
+
+        },
+
+        shareTwitter: function(){
+            var query_params = {
+                text: "I got "+this.total_correct+"/"+this.game_questions.length+" correct on Currency or DJ!",
+                url:location.href,
+                related:'dangrover,mzaveri'
+            }
+
+            location.href = 'https://twitter.com/intent/tweet?' + encodeQueryData(query_params);
+        },
+
+        shareMessenger: function(){
+            // Only works on mobile
+            var app_id = 1170322286433316;
+            window.open('fb-messenger://share?link=' + encodeURIComponent(link) + '&app_id=' + encodeURIComponent(app_id));
+        },
+
+        shareTelegram: function(){
+            location.href='https://t.me/share/url?url='+encodeURIComponent(location.href);
         }
+
+
     }
 });
