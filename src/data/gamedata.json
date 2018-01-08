@@ -1,6 +1,6 @@
 {
     "game_rules": {
-        "questions_per_game": 5
+        "questions_per_game": 15
     },
     "category_names": {
         "crypto": "Cryptocurrency",
