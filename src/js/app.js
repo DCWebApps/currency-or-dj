@@ -71,7 +71,13 @@ var game = new Vue({
 
                     $.when(
                         $.ajax({
-                            url: `https://min-api.cryptocompare.com/data/pricehistorical?fsym=${item.cryptocompare_symbol}&tsyms=USD&ts=${ranom_date_unix}`,
+                            type: "get",
+                            url: "https://min-api.cryptocompare.com/data/pricehistorical",
+                            data:{
+                                "fsym": item.cryptocompare_symbol,
+                                "tsyms": "USD",
+                                "ts": ranom_date_unix
+                            },
                             dataType: 'json', 
                             success: function(data) { 
                                 item.historcal_usd_value = data[item.cryptocompare_symbol]["USD"];
@@ -85,7 +91,11 @@ var game = new Vue({
                     ).then(function() {
 
                         $.ajax({
-                            url: `https://min-api.cryptocompare.com/data/price?fsym=${item.cryptocompare_symbol}&tsyms=USD`,
+                            url: "https://min-api.cryptocompare.com/data/price",
+                            data:{
+                                "fsym": item.cryptocompare_symbol,
+                                "tsyms": "USD"
+                            },
                             dataType: 'json', 
                             success: function(data) { 
                                 item.current_usd_value = data["USD"];
