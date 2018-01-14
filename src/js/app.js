@@ -63,11 +63,17 @@ var game = new Vue({
         preLoadCoinInfo: function(){
             //get random date.
             var random_date = getRandomDate();
-            var ranom_date_unix = (Math.floor(random_date/ 1000));
+            var random_date_unix = (Math.floor(random_date/ 1000));
 
             $.each(this.game_questions, function (i, item) {
                 ticker = item.cryptocompare_symbol;
                 if (item["cryptocompare_symbol"] != null){
+
+                    if (Math.floor(random_date/ 1000) < item.listing_timestamp){
+                        console.log
+                        random_date_unix = item.listing_timestamp;
+                        console.log("the date is %o", random_date_unix);
+                    }
 
                     $.when(
                         $.ajax({
@@ -76,10 +82,11 @@ var game = new Vue({
                             data:{
                                 "fsym": item.cryptocompare_symbol,
                                 "tsyms": "USD",
-                                "ts": ranom_date_unix
+                                "ts": random_date_unix
                             },
                             dataType: 'json', 
                             success: function(data) { 
+                                console.log("the date is %o", data);
                                 item.historcal_usd_value = data[item.cryptocompare_symbol]["USD"];
                                 item.coin_info = data[0];
                             },
@@ -98,6 +105,7 @@ var game = new Vue({
                             },
                             dataType: 'json', 
                             success: function(data) { 
+                                console.log("the date here is %o", data);
                                 item.current_usd_value = data["USD"];
 
                                 //what is $1k worth today

@@ -11,6 +11,7 @@
             "coinmarketcap_id": "rchain",
             "cryptocompare_symbol": "RHOC",
             "category": "crypto",
+            "listing_timestamp": "1507430365",
             "description": "RChain is a cryptocurrency whose mission is \"to become a blockchain solution with industrial-scale utility, RChain must provide content delivery at the scale of Facebook and support transactions at the speed of Visa.\""
         },
         {
@@ -18,6 +19,7 @@
             "coinmarketcap_id": "bytom",
             "cryptocompare_symbol": "BTM*",
             "category": "crypto",
+            "listing_timestamp": "1502228365",
             "description": "Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom."
         },
         {
@@ -25,6 +27,7 @@
             "coinmarketcap_id": "enigma",
             "cryptocompare_symbol": "ENG",
             "category": "crypto",
+            "listing_timestamp": "1507871379",
             "description": "The Enigma protocol is a second-layer, off-chain network that aims to solve the two biggest problems for blockchains: scalability and privacy. "
         },
         {
@@ -32,6 +35,7 @@
             "coinmarketcap_id": "coss",
             "cryptocompare_symbol": "COSS",
             "category": "crypto",
+            "listing_timestamp": "1506367477",
             "description": "COSS &quot;gathers the most popular cryptocurrency services and products into one portal allowing users to gain control over their finances, to manage transactions, to integrate merchants’ payments, to deposit funds and so much more.&quot;"
         },
         {
@@ -39,6 +43,7 @@
             "coinmarketcap_id": "ethos",
             "cryptocompare_symbol": "BQX",
             "category": "crypto",
+            "listing_timestamp": "1500400156",
             "description": "Ethos is an access token that enables anybody to securely manage their cryptocurrency wallets, keys and coins."
         },
         {
@@ -46,6 +51,7 @@
             "coinmarketcap_id": "0x",
             "category": "crypto",
             "cryptocompare_symbol": "ZRX",
+            "listing_timestamp": "1502892561",
             "description": "0x is an open, permissionless protocol allowing for ERC20 tokens to be traded on the Ethereum blockchain."
         },
         {
@@ -134,17 +140,11 @@
             "description": "Based on its own Blockchain network and token LSK, Lisk will enable developers to create, distribute and manage decentralized Blockchain applications by deploying their own sidechain linked to the Lisk network, including a custom token."
         },
         {
-            "name": "0x",
-            "coinmarketcap_id": "0x",
-            "category": "crypto",
-            "cryptocompare_symbol": "ZRX",
-            "description": "0x is an open, permissionless protocol allowing for ERC20 tokens to be traded on the Ethereum blockchain."
-        },
-        {
             "name": "WAX",
             "category": "crypto",
             "coinmarketcap_id": "wax",
             "cryptocompare_symbol": "WAX",
+            "listing_timestamp": "1513887588",
             "description": "WAX is a decentralized platform that enables anyone to operate a fully functioning virtual marketplace with zero investment in security, infrastructure, or payment processing."
         },
         {
@@ -152,6 +152,7 @@
             "coinmarketcap_id": "walton",
             "cryptocompare_symbol": "WTC",
             "category": "crypto",
+            "listing_timestamp": "1503890398",
             "description": "Walton is a cryptocurrency whose mission is to extend the block chain technology from Internet to Internet of Things, which will in turn create a genuine, believable, traceable business model with totally shared data and transparent information, depending on the combination of RFID technology and Walton chain."
         },
         {
@@ -159,6 +160,7 @@
             "category": "crypto",
             "description": "Storj aims to become a cloud storage platform that can’t be censored or monitored, or have downtime. It is the first decentralized, end-to-end encrypted cloud storage that uses blockchain technology and cryptography to secure your files.",
             "coinmarketcap_id": "storj",
+            "listing_timestamp": "1499000058",
             "cryptocompare_symbol": "SJCX"
         },
         {
@@ -166,6 +168,7 @@
             "category": "crypto",
             "coinmarketcap_id": "gnosis-gno",
             "cryptocompare_symbol": "GNO",
+            "listing_timestamp": "1493755794",
             "description": "Gnosis is a permissionless and decentralized platform built on Ethereum, Gnosis is the easiest way to aggregate relevant information from both human and AI agents into one number."
         },
         {
@@ -180,6 +183,7 @@
             "category": "crypto",
             "coinmarketcap_id": "raiden-network-token",
             "cryptocompare_symbol": "RDN*",
+            "listing_timestamp": "1510171472",
             "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee and scalable payments. It’s complementary to the Ethereum blockchain and works with any ERC20 compatible token."
         },
         {
@@ -187,6 +191,7 @@
             "coinmarketcap_id": "bancor",
             "cryptocompare_symbol": "BNT",
             "category": "crypto",
+            "listing_timestamp": "1499511306",
             "description": "Bancor is a Decentralized Liquidity Network that allows you to hold any Ethereum token and convert it to any other token in the network, with no counter party, at an automatically calculated price, using a simple web wallet."
         },
         {
