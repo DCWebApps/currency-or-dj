@@ -11,7 +11,7 @@
             "coinmarketcap_id": "rchain",
             "cryptocompare_symbol": "RHOC",
             "category": "crypto",
-            "listing_timestamp": "1507430365",
+            "listing_timestamp": "1508482800",
             "description": "RChain is a cryptocurrency whose mission is \"to become a blockchain solution with industrial-scale utility, RChain must provide content delivery at the scale of Facebook and support transactions at the speed of Visa.\""
         },
         {
@@ -19,7 +19,7 @@
             "coinmarketcap_id": "bytom",
             "cryptocompare_symbol": "BTM*",
             "category": "crypto",
-            "listing_timestamp": "1502228365",
+            "listing_timestamp": "1502607600",
             "description": "Bytom is an interactive protocol of multiple byte assets. Heterogeneous byte-assets (indigenous digital currency, digital assets) that operate in different forms on the Bytom Blockchain and atomic assets (warrants, securities, dividends, bonds, intelligence information, forecasting information and other information that exist in the physical world) can be registered, exchanged, gambled and engaged in other more complicated and contract-based interoperations via Bytom."
         },
         {
@@ -27,7 +27,7 @@
             "coinmarketcap_id": "enigma",
             "cryptocompare_symbol": "ENG",
             "category": "crypto",
-            "listing_timestamp": "1507871379",
+            "listing_timestamp": "1508828400",
             "description": "The Enigma protocol is a second-layer, off-chain network that aims to solve the two biggest problems for blockchains: scalability and privacy. "
         },
         {
@@ -35,7 +35,7 @@
             "coinmarketcap_id": "coss",
             "cryptocompare_symbol": "COSS",
             "category": "crypto",
-            "listing_timestamp": "1506367477",
+            "listing_timestamp": "1509606000",
             "description": "COSS &quot;gathers the most popular cryptocurrency services and products into one portal allowing users to gain control over their finances, to manage transactions, to integrate merchants’ payments, to deposit funds and so much more.&quot;"
         },
         {
@@ -102,6 +102,7 @@
             "coinmarketcap_id": "cardano",
             "cryptocompare_symbol": "ADA",
             "category": "crypto",
+            "listing_timestamp": "1508569200",
             "description": "Cardano is a decentralised public blockchain and cryptocurrency project and is fully open source. Cardano is developing a smart contract platform which seeks to deliver more advanced features than any protocol previously developed."
         },
         {
@@ -144,7 +145,7 @@
             "category": "crypto",
             "coinmarketcap_id": "wax",
             "cryptocompare_symbol": "WAX",
-            "listing_timestamp": "1513887588",
+            "listing_timestamp": "1515398400",
             "description": "WAX is a decentralized platform that enables anyone to operate a fully functioning virtual marketplace with zero investment in security, infrastructure, or payment processing."
         },
         {
@@ -152,7 +153,7 @@
             "coinmarketcap_id": "walton",
             "cryptocompare_symbol": "WTC",
             "category": "crypto",
-            "listing_timestamp": "1503890398",
+            "listing_timestamp": "1505458800",
             "description": "Walton is a cryptocurrency whose mission is to extend the block chain technology from Internet to Internet of Things, which will in turn create a genuine, believable, traceable business model with totally shared data and transparent information, depending on the combination of RFID technology and Walton chain."
         },
         {
@@ -183,7 +184,7 @@
             "category": "crypto",
             "coinmarketcap_id": "raiden-network-token",
             "cryptocompare_symbol": "RDN*",
-            "listing_timestamp": "1510171472",
+            "listing_timestamp": "1510905600",
             "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee and scalable payments. It’s complementary to the Ethereum blockchain and works with any ERC20 compatible token."
         },
         {
@@ -213,6 +214,7 @@
             "category": "crypto",
             "coinmarketcap_id": "red-pulse",
             "cryptocompare_symbol": "RPX",
+            "listing_timestamp": "1513152000",
             "description": "Red Pulse will introduce a token, RPX, that will power a brand new content production, distribution, and consumption platform focused initially on China’s capital markets. Our vision is to create a direct-incentivization ecosystem facilitated by the RPX token, creating a global community of colleagues."
         },
         {
