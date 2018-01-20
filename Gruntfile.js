@@ -7,7 +7,8 @@ module.exports = function(grunt) {
                    'src/js/vendor/vue.js',
                    'src/js/vendor/particles.js',
                    'src/js/vendor/fontawesome/fontawesome-all.js',
-                   'src/js/vendor/fontawesome/retina.js'
+                   'src/js/vendor/fontawesome/retina.js',
+                   'src/js/vendor/howler.core.js'
                   ],
               dest:'build/js/vendor.js'
           },
@@ -60,6 +61,12 @@ module.exports = function(grunt) {
                 'dest':'build/css',
                 'expand':true
               },
+              fontawesome:{
+                'cwd':'src/sfx',
+                'src':'**',
+                'dest':'build/sfx',
+                'expand':true
+              }
       },
       minifyHtml: {
         options: {

@@ -27,7 +27,10 @@ $(function() {
     console.log("Deck Totals: %o", totals);
 };
 
-
+var sounds = {
+    right:new Howl({"src":"sfx/right.wav"}),
+    wrong:new Howl({"src":"sfx/wrong.wav"})
+};
 
 var game = new Vue({
     el:'#game',
@@ -148,6 +151,8 @@ var game = new Vue({
             var q = this.game_questions[this.current_question_idx];
             var is_correct = (answer == q.category) || (q.category == "both"); 
             var game = this;
+
+            (is_correct ? sounds.right : sounds.wrong).play();
 
             this.flashOverlay(is_correct ? 'right' : 'wrong', 
                 function(){
