@@ -2,20 +2,19 @@ var game_data = {};
 
 
 // Page Load 
-$(function() {
+window.onload = function() {
     // Particle effects (mandatory for all blockchain-related websites)
     particlesJS.load('particles', 'data/particles.json', function() {});
     
     // Load game data 
-    $.getJSON('data/gamedata.json', function(json){
-        console.log("Loaded game data");
-        game_data = json;
-        checkGameData();
-    },
-    function(error){
-        alert("Could not load game data.");
-    });
-});
+    fetch('data/gamedata.json').then(function(response){
+        response.json().then(function(data) {
+            console.log("Loaded game data: %o", data);
+            game_data = data;
+            checkGameData();
+        });
+    }); 
+};
 
 
  // Make sure we have enough of each category for a fair game.
