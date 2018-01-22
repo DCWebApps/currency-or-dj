@@ -3,7 +3,7 @@
 It's Silicon Valley's newest quiz game! Can you guess which names are cryptocurrencies and which are electronic dance music artists? 
 
 ## To Play
-[Click Here](https://dangrover.github.io/crypto-or-edm/index.html)!
+[Click Here](https://dangrover.github.io/currency-or-dj/index.html)!
 
 ## Forking the project
 To run it locally:
