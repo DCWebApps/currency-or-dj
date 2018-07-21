@@ -3,7 +3,7 @@
 It's the newest quiz game! Can you guess which names are cryptocurrencies and which are electronic dance music artists? 
 
 ## To Play
-[Click Here](http://lacoste.github.io/currency-or-dj/index.html)!
+[Click Here](https://lacoste.github.io/currency-or-dj/index.html)!
 
 ## This is a fork of the original project
 To run it locally:
