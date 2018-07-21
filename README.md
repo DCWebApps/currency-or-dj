@@ -1,13 +1,13 @@
 # Currency or DJ?
 
-It's Silicon Valley's newest quiz game! Can you guess which names are cryptocurrencies and which are electronic dance music artists? 
+It's the newest quiz game! Can you guess which names are cryptocurrencies and which are electronic dance music artists? 
 
 ## To Play
-[Click Here](https://dangrover.github.io/currency-or-dj/index.html)!
+[Click Here](http://lacoste.github.io/currency-or-dj/index.html)!
 
-## Forking the project
+## This is a fork of the original project
 To run it locally:
-* `git clone https://github.com/dangrover/crypto-or-edm.git`
+* `git clone https://github.com/DCWebApps/currency-or-dh.git`
 * `npm install` for dependencies. 
 * `npm install -g grunt-cli` to make sure you have the `grunt` command line tool (for building).
 * Use the following commands:
